@@ -45,22 +45,31 @@ const OurServices = () => {
               <div className="space-y-4 sm:space-y-6">
                 {[
                   {
-                    icon: <CheckCircle className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />,
+                    icon: (
+                      <CheckCircle className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
+                    ),
                     title: "Any Condition Accepted",
                     desc: "Running, non-running, accident-damaged, or flood-damaged vehicles",
                   },
                   {
-                    icon: <Banknote className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />,
+                    icon: (
+                      <Banknote className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
+                    ),
                     title: "Instant Payment",
                     desc: "Get cash immediately upon vehicle collection with transparent pricing",
                   },
                   {
-                    icon: <Shield className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />,
+                    icon: (
+                      <Shield className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
+                    ),
                     title: "Complete Documentation",
                     desc: "All legal formalities handled including RC transfer and certificates",
                   },
                 ].map((feature, index) => (
-                  <div key={index} className="flex items-start space-x-3 sm:space-x-4">
+                  <div
+                    key={index}
+                    className="flex items-start space-x-3 sm:space-x-4"
+                  >
                     <div className="text-[#da3742] flex-shrink-0 mt-1">
                       {feature.icon}
                     </div>
@@ -79,9 +88,9 @@ const OurServices = () => {
 
             <div className="relative mt-8 lg:mt-0">
               <img
-                src="/images/about.jpg"
+                src="/images/individual.jpg"
                 alt="Individual car scrapping"
-                className="w-full object-cover shadow-2xl rounded-lg sm:rounded-xl lg:rounded-2xl"
+                className="w-full object-cover shadow-2xl "
               />
             </div>
           </div>
@@ -89,10 +98,10 @@ const OurServices = () => {
       </section>
 
       {/* Service 2: Commercial Vehicle Recycling */}
-      <section 
-        className="min-h-screen relative flex items-center bg-gray-900/95 backdrop-blur-md" 
+      <section
+        className="min-h-screen relative flex items-center bg-gray-900/95 backdrop-blur-md"
         style={{
-          backgroundImage: `url('/images/about.jpg')`,
+          backgroundImage: `url('/images/bg-1.jpg')`,
           backgroundColor: "rgba(0, 0, 0, 0.7)",
           backgroundBlendMode: "overlay",
           backgroundAttachment: window.innerWidth > 768 ? "fixed" : "scroll",
@@ -102,9 +111,9 @@ const OurServices = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
             <div className="relative order-2 lg:order-1 mt-8 lg:mt-0">
               <img
-                src="/images/about.jpg"
+                src="/images/commercial.jpg"
                 alt="Commercial vehicle recycling"
-                className="w-full object-cover shadow-2xl rounded-lg sm:rounded-xl lg:rounded-2xl"
+                className="w-full object-cover shadow-2xl"
               />
             </div>
 
@@ -128,22 +137,31 @@ const OurServices = () => {
               <div className="space-y-4 sm:space-y-6">
                 {[
                   {
-                    icon: <Factory className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />,
+                    icon: (
+                      <Factory className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
+                    ),
                     title: "All Commercial Types",
                     desc: "Trucks, buses, tempos, tractors, construction vehicles, and heavy machinery",
                   },
                   {
-                    icon: <Clock className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />,
+                    icon: (
+                      <Clock className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
+                    ),
                     title: "Scheduled Services",
                     desc: "Pre-planned collection schedules to minimize business downtime",
                   },
                   {
-                    icon: <Award className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />,
+                    icon: (
+                      <Award className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
+                    ),
                     title: "Compliance Reporting",
                     desc: "Detailed environmental compliance reports for corporate sustainability goals",
                   },
                 ].map((feature, index) => (
-                  <div key={index} className="flex items-start space-x-3 sm:space-x-4">
+                  <div
+                    key={index}
+                    className="flex items-start space-x-3 sm:space-x-4"
+                  >
                     <div className="text-[#da3742] flex-shrink-0 mt-1">
                       {feature.icon}
                     </div>
@@ -186,22 +204,31 @@ const OurServices = () => {
               <div className="space-y-4 sm:space-y-6">
                 {[
                   {
-                    icon: <Factory className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />,
+                    icon: (
+                      <Factory className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
+                    ),
                     title: "Industrial Scale Processing",
                     desc: "Handle 100+ vehicles monthly with dedicated processing lines and equipment",
                   },
                   {
-                    icon: <Users className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />,
+                    icon: (
+                      <Users className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
+                    ),
                     title: "Dedicated Account Team",
                     desc: "Assigned relationship managers and technical specialists for seamless operations",
                   },
                   {
-                    icon: <Shield className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />,
+                    icon: (
+                      <Shield className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
+                    ),
                     title: "Volume-Based Pricing",
                     desc: "Special competitive rates and profit-sharing models for high-volume clients",
                   },
                 ].map((feature, index) => (
-                  <div key={index} className="flex items-start space-x-3 sm:space-x-4">
+                  <div
+                    key={index}
+                    className="flex items-start space-x-3 sm:space-x-4"
+                  >
                     <div className="text-[#da3742] flex-shrink-0 mt-1">
                       {feature.icon}
                     </div>
@@ -222,7 +249,7 @@ const OurServices = () => {
               <img
                 src="/images/about.jpg"
                 alt="Bulk recycling solutions"
-                className="w-full object-cover shadow-2xl rounded-lg sm:rounded-xl lg:rounded-2xl"
+                className="w-full object-cover shadow-2xl"
               />
             </div>
           </div>

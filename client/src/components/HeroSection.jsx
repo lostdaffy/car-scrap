@@ -6,7 +6,7 @@ const HeroSection = ({ title }) => {
     <section
       className="relative flex items-center h-[40vh] text-white bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: "url('/images/1.jpg')",
+        backgroundImage: "url('/images/heading.jpg')",
         backgroundAttachment: "fixed"
       }}
     >

@@ -82,9 +82,9 @@ const WhoWeAre = () => {
 
             <div className="relative mt-8 lg:mt-0">
               <img
-                src="/images/about.jpg"
+                src="/images/success.jpg"
                 alt="Our facility"
-                className="w-full object-cover shadow-2xl rounded-lg sm:rounded-xl lg:rounded-2xl"
+                className="w-full object-cover shadow-2xl"
               />
             </div>
           </div>
@@ -92,10 +92,10 @@ const WhoWeAre = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section 
-        className="min-h-screen relative flex items-center bg-gray-900/95 backdrop-blur-md" 
+      <section
+        className="min-h-screen relative flex items-center bg-gray-900/95 backdrop-blur-md"
         style={{
-          backgroundImage: `url('/images/about.jpg')`,
+          backgroundImage: `url('/images/bg-1.jpg')`,
           backgroundColor: "rgba(0, 0, 0, 0.7)",
           backgroundBlendMode: "overlay",
           backgroundAttachment: window.innerWidth > 768 ? "fixed" : "scroll",
@@ -128,9 +128,14 @@ const WhoWeAre = () => {
                   "Ensure complete regulatory compliance",
                   "Create sustainable employment opportunities",
                 ].map((item, index) => (
-                  <li key={index} className="flex items-center space-x-3 sm:space-x-4">
+                  <li
+                    key={index}
+                    className="flex items-center space-x-3 sm:space-x-4"
+                  >
                     <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-[#da3742] flex-shrink-0" />
-                    <span className="text-base sm:text-lg text-gray-400">{item}</span>
+                    <span className="text-base sm:text-lg text-gray-400">
+                      {item}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -151,9 +156,14 @@ const WhoWeAre = () => {
                   "Carbon-neutral operations by 2030",
                   "Industry benchmark for sustainability",
                 ].map((item, index) => (
-                  <li key={index} className="flex items-center space-x-3 sm:space-x-4">
+                  <li
+                    key={index}
+                    className="flex items-center space-x-3 sm:space-x-4"
+                  >
                     <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-[#da3742] flex-shrink-0" />
-                    <span className="text-base sm:text-lg text-gray-400">{item}</span>
+                    <span className="text-base sm:text-lg text-gray-400">
+                      {item}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -224,10 +234,10 @@ const WhoWeAre = () => {
       </section>
 
       {/* Leadership Team */}
-      <section 
-        className="min-h-screen relative flex items-center bg-gray-900/95 backdrop-blur-md" 
+      <section
+        className="min-h-screen relative flex items-center bg-gray-900/95 backdrop-blur-md"
         style={{
-          backgroundImage: `url('/images/about.jpg')`,
+          backgroundImage: `url('/images/bg-1.jpg')`,
           backgroundColor: "rgba(0, 0, 0, 0.7)",
           backgroundBlendMode: "overlay",
           backgroundAttachment: window.innerWidth > 768 ? "fixed" : "scroll",
@@ -247,12 +257,16 @@ const WhoWeAre = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
             <div className="bg-gray-800 p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-xl text-center hover:shadow-2xl transition-shadow">
               <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 bg-[#da3742] rounded-full mx-auto mb-4 sm:mb-6 flex items-center justify-center">
-                <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">RS</span>
+                <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+                  RS
+                </span>
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-gray-100 mb-1 sm:mb-2">
                 Rajesh Sharma
               </h3>
-              <p className="text-[#da3742] font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Founder & CEO</p>
+              <p className="text-[#da3742] font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
+                Founder & CEO
+              </p>
               <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                 20+ years in automotive industry. Pioneer in bringing German
                 recycling technology to India. MBA from IIM Ahmedabad.
@@ -261,12 +275,16 @@ const WhoWeAre = () => {
 
             <div className="bg-gray-800 p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-xl text-center hover:shadow-2xl transition-shadow">
               <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 bg-[#da3742] rounded-full mx-auto mb-4 sm:mb-6 flex items-center justify-center">
-                <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">PG</span>
+                <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+                  PG
+                </span>
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-gray-100 mb-1 sm:mb-2">
                 Priya Gupta
               </h3>
-              <p className="text-[#da3742] font-semibold mb-3 sm:mb-4 text-sm sm:text-base">CTO</p>
+              <p className="text-[#da3742] font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
+                CTO
+              </p>
               <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                 Expert in recycling technology and automation. Former Tesla
                 engineer. PhD in Environmental Engineering from Stanford.
@@ -275,12 +293,16 @@ const WhoWeAre = () => {
 
             <div className="bg-gray-800 p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-xl text-center hover:shadow-2xl transition-shadow sm:col-span-2 lg:col-span-1 max-w-md mx-auto sm:max-w-none">
               <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 bg-[#da3742] rounded-full mx-auto mb-4 sm:mb-6 flex items-center justify-center">
-                <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">AK</span>
+                <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+                  AK
+                </span>
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-gray-100 mb-1 sm:mb-2">
                 Amit Kumar
               </h3>
-              <p className="text-[#da3742] font-semibold mb-3 sm:mb-4 text-sm sm:text-base">COO</p>
+              <p className="text-[#da3742] font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
+                COO
+              </p>
               <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                 Operations specialist with 15+ years in waste management. Expert
                 in scaling recycling operations across India.

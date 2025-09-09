@@ -12,7 +12,7 @@ const Home = () => {
           backgroundImage: `url('/images/hero-bg.jpg')`,
           backgroundColor: "rgba(0, 0, 0, 0.7)", // Dark overlay
           backgroundBlendMode: "overlay",
-          backgroundAttachment: "fixed",
+          // backgroundAttachment: "fixed",
         }}
       >
         {/* Content */}
@@ -67,7 +67,7 @@ const Home = () => {
                 </p>
               </div>
               <div className="lg:w-1/2 w-full">
-                <img src="/images/1.jpg" className="h-[150px] sm:h-[200px] w-full object-cover rounded-lg" alt="" />
+                <img src="/images/eco.jpg" className="h-[150px] sm:h-[200px] w-full object-cover rounded-lg" alt="" />
               </div>
             </div>
 
@@ -87,7 +87,7 @@ const Home = () => {
                 </p>
               </div>
               <div className="lg:w-1/2 w-full">
-                <img src="/images/1.jpg" className="h-[150px] sm:h-[200px] w-full object-cover rounded-lg" alt="" />
+                <img src="/images/scrap.jpg" className="h-[150px] sm:h-[200px] w-full object-cover rounded-lg" alt="" />
               </div>
             </div>
 
@@ -108,7 +108,7 @@ const Home = () => {
                 </p>
               </div>
               <div className="lg:w-1/2 w-full">
-                <img src="/images/1.jpg" className="h-[150px] sm:h-[200px] w-full object-cover rounded-lg" alt="" />
+                <img src="/images/parts.jpg" className="h-[150px] sm:h-[200px] w-full object-cover rounded-lg" alt="" />
               </div>
             </div>
           </div>
@@ -119,7 +119,7 @@ const Home = () => {
       <section
         className="min-h-screen relative flex items-center py-12 sm:py-16 lg:py-0"
         style={{
-          backgroundImage: `url('/images/hero-bg.jpg')`,
+          backgroundImage: `url('/images/bg-1.jpg')`,
           backgroundColor: "rgba(0, 0, 0, 0.7)",
           backgroundBlendMode: "overlay",
           backgroundAttachment: "fixed",

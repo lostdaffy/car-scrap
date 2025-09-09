@@ -67,9 +67,9 @@ const HowItWorks = () => {
             </div>
             <div className="relative mt-8 lg:mt-0">
               <img
-                src="/images/about.jpg"
+                src="/images/worker.jpg"
                 alt="Quote process"
-                className="w-full shadow-2xl rounded-lg sm:rounded-xl lg:rounded-2xl"
+                className="w-full shadow-2xl"
               />
             </div>
           </div>
@@ -80,7 +80,7 @@ const HowItWorks = () => {
       <section
         className="min-h-screen relative flex items-center"
         style={{
-          backgroundImage: `url('/images/about.jpg')`,
+          backgroundImage: `url('/images/bg-1.jpg')`,
           backgroundColor: "rgba(0, 0, 0, 0.7)",
           backgroundBlendMode: "overlay",
           backgroundAttachment: "fixed",
@@ -92,7 +92,7 @@ const HowItWorks = () => {
               <img
                 src="/images/about.jpg"
                 alt="Vehicle pickup process"
-                className="w-full shadow-2xl rounded-lg sm:rounded-xl lg:rounded-2xl"
+                className="w-full shadow-2xl "
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent rounded-lg sm:rounded-xl lg:rounded-2xl"></div>
             </div>
@@ -211,9 +211,9 @@ const HowItWorks = () => {
             </div>
             <div className="relative mt-8 lg:mt-0">
               <img
-                src="/images/about.jpg"
+                src="/images/invoice.jpg"
                 alt="Payment and documentation process"
-                className="w-full shadow-2xl rounded-lg sm:rounded-xl lg:rounded-2xl"
+                className="w-full shadow-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent rounded-lg sm:rounded-xl lg:rounded-2xl"></div>
             </div>
