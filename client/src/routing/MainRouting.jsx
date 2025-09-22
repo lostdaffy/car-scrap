@@ -13,9 +13,8 @@ const MainRouting = () => {
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="who-we-are" element={<WhoWeAre />} />
-          <Route path="how-it-works" element={<HowItWorks />} />
+          <Route path="/" element={<Home />} />
+          <Route path="about" element={<WhoWeAre />} />
           <Route path="our-services" element={<OurServices />} />
           <Route path="contact" element={<Contact />} />
         </Route>
