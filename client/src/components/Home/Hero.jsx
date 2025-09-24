@@ -4,6 +4,8 @@ import { vehicleTypes, vehicleData, benefits } from "../../data/FormData";
 const Hero = () => {
   const [selectedVehicleType, setSelectedVehicleType] = useState("Car");
   const [selectedMake, setSelectedMake] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
   const [formData, setFormData] = useState({
     make: "",
     model: "",
@@ -21,17 +23,30 @@ const Hero = () => {
     }));
   };
 
-  // Web3Forms submit
+  // Enhanced Web3Forms submit with better UX
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitMessage("");
+
+    // Form validation
+    if (!selectedMake || !formData.model || !formData.vehicleNumber || !formData.name || !formData.phone) {
+      setSubmitMessage("Please fill all required fields");
+      setIsSubmitting(false);
+      return;
+    }
 
     const formPayload = {
-      access_key: "260cad70-c5b5-4493-bad4-59b3452c6603", // replace with your key
-      subject: "New Vehicle Scrap Request",
+      access_key: "260cad70-c5b5-4493-bad4-59b3452c6603",
+      subject: "New Vehicle Scrap Valuation Request - Immediate Action Required",
+      from_name: "Vehicle Scrapping Portal",
       vehicleType: selectedVehicleType,
       make: selectedMake,
       model: formData.model,
-      ...formData,
+      vehicleNumber: formData.vehicleNumber,
+      customerName: formData.name,
+      phone: formData.phone,
+      submissionTime: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
     };
 
     try {
@@ -45,8 +60,9 @@ const Hero = () => {
       });
 
       const result = await response.json();
+      
       if (result.success) {
-        alert("Form submitted successfully ✅");
+        setSubmitMessage("Success! Our team will contact you within 24 Hours with your vehicle valuation.");
         setFormData({
           make: "",
           model: "",
@@ -57,90 +73,100 @@ const Hero = () => {
         });
         setSelectedMake("");
         setSelectedVehicleType("Car");
+        
+        // Auto-hide success message after 5 seconds
+        setTimeout(() => setSubmitMessage(""), 5000);
       } else {
-        alert("Something went wrong ❌");
+        setSubmitMessage("⚠️ Unable to submit request. Please call +91 98765 43210 directly.");
       }
     } catch (error) {
-      console.error(error);
-      alert("Error submitting form ❌");
+      console.error("Submission error:", error);
+      setSubmitMessage("⚠️ Network error. Please try again or call +91 98765 43210");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
     <div className="min-h-screen relative">
-      {/* Background */}
+      {/* Enhanced Background with Professional Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
-      ></div>
+        style={{ backgroundImage: "url('/images/hero-bg-1.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-[4px]"></div>
+      </div>
 
       <div className="relative z-10 min-h-screen flex justify-center">
         <div className="container mx-auto px-4 sm:px-6 lg:px-10 xl:px-20">
           <div className="grid lg:grid-cols-[55%_45%] gap-6 lg:gap-8 items-center min-h-screen py-8 lg:py-0">
-            {/* Left Section */}
-            <div className="text-white order-1 lg:order-2">
-              <div className="inline-flex mb-2">
-                <span className="bg-[#E0A75E]/90 text-white px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium">
-                  Government Registered Facility
+            {/* Professional Left Section */}
+            <div className="text-white order-2 lg:order-1">
+              <div className="inline-flex mb-4">
+                <span className="bg-[#E0A75E] text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+                  <i className="ri-shield-check-line mr-2"></i>
+                  Government Registered & RTO Approved Facility
                 </span>
               </div>
-              <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold leading-tight mb-6 lg:mb-8">
-                Scrap your old vehicle and get instant payment
+              
+              <h1 className="uppercase text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6 lg:mb-8">
+                Get <span className="text-[#E0A75E]">Maximum Value</span> for Your Old Vehicle
               </h1>
 
-              {/* Stats Section */}
-              <div className="flex flex-row sm:flex-row items-start sm:items-center gap-6 mt-10">
-                <div className="">
-                  <div className="text-3xl font-bold text-gray-900">10k +</div>
-                  <div className="text-gray-900 text-sm">Vehicle Scrapped</div>
-                </div>
+              <p className="text-lg text-gray-200 mb-8 leading-relaxed">
+                India's most trusted vehicle scrapping service. Instant valuation, doorstep pickup, and immediate payment with proper documentation.
+              </p>
 
-                <div className="">
-                  <div className="flex items-center gap-2 mb-1">
-                    <div className="flex text-[#E0A75E] text-2xl">
-                      {"★".repeat(4)}
-                      <span className="text-gray-300">★</span>
-                    </div>
-                    <span className="font-semibold">4.8/5</span>
-                  </div>
-                  <div className="text-gray-900 text-sm">
-                    from 500+ customers
-                  </div>
+
+              {/* Trust Indicators */}
+              <div className="flex flex-wrap gap-4 mt-8">
+                <div className="flex items-center gap-2 text-sm text-gray-300">
+                  <i className="ri-time-line text-[#E0A75E]"></i>
+                  <span>Same Day Pickup</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-300">
+                  <i className="ri-money-dollar-circle-line text-[#E0A75E]"></i>
+                  <span>Instant Payment</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-300">
+                  <i className="ri-file-shield-line text-[#E0A75E]"></i>
+                  <span>Legal Documentation</span>
                 </div>
               </div>
             </div>
 
-            {/* Right Section - Form */}
+            {/* Enhanced Form Section */}
             <div className="order-1 lg:order-2">
               <form
                 onSubmit={handleSubmit}
-                className="bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-2xl"
+                className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-2xl border border-white/20"
               >
-                {/* Benefits */}
-                <div className="flex flex-wrap gap-3 sm:gap-6 lg:gap-10 mb-6 justify-between text-center">
-                  {benefits.map((benefit, idx) => (
-                    <div
-                      key={idx}
-                      className="flex items-center gap-1 text-gray-900"
-                    >
-                      <i className="ri-checkbox-circle-fill text-lg sm:text-xl text-[#E0A75E]"></i>
-                      <span className="text-xs sm:text-sm font-medium">
-                        {benefit}
-                      </span>
-                    </div>
-                  ))}
-                </div>
+                
 
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 text-center">
-                  Get an instant valuation
+                <h3 className="text-2xl font-bold text-gray-900 mb-2 text-center">
+                  Get Instant Vehicle Valuation
                 </h3>
+                <p className="text-gray-600 text-center mb-6 text-sm">
+                  Complete the form below and receive your quote within minutes
+                </p>
 
-                {/* Vehicle Types */}
+                {/* Submit Message Display */}
+                {submitMessage && (
+                  <div className={`p-4 rounded-xl mb-6 text-center text-sm font-medium ${
+                    submitMessage.includes("Success") 
+                      ? "bg-green-50 text-green-800 border border-green-200" 
+                      : "bg-red-50 text-red-800 border border-red-200"
+                  }`}>
+                    {submitMessage}
+                  </div>
+                )}
+
+                {/* Enhanced Vehicle Types */}
                 <div className="mb-6">
-                  <label className="block text-sm font-semibold text-gray-700 mb-4">
-                    Vehicle Type*
+                  <label className="block text-sm font-bold text-gray-800 mb-4">
+                    Select Vehicle Type*
                   </label>
-                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3">
+                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
                     {vehicleTypes.map((vehicle) => (
                       <button
                         key={vehicle.type}
@@ -150,26 +176,21 @@ const Hero = () => {
                           setSelectedMake("");
                           setFormData((prev) => ({ ...prev, model: "" }));
                         }}
-                        className={`p-2 sm:p-3 lg:p-1 rounded-xl border-2 text-center transition-all duration-300 ${
+                        className={`p-2 rounded-xl border-2 text-center transition-all duration-300 ${
                           selectedVehicleType === vehicle.type
-                            ? "border-[#E0A75E] bg-[#E0A75E]/10 shadow-md scale-105"
-                            : "border-gray-200 bg-white hover:border-gray-300 hover:shadow-md"
+                            ? "border-[#E0A75E] bg-[#E0A75E]/10 shadow-lg scale-105"
+                            : "border-gray-300 bg-white hover:border-[#E0A75E]/50 hover:shadow-md"
                         }`}
                       >
-                        <i
-                          className={`${vehicle.icon} text-2xl sm:text-3xl mb-1 sm:mb-2 text-[#E0A75E]`}
-                        ></i>
-                        <div className="text-xs sm:text-sm font-semibold text-gray-900">
-                          {vehicle.type}
-                        </div>
+                        <i className={`${vehicle.icon} text-3xl mb-2 text-[#E0A75E]`}></i>
+                        <div className="text-sm font-semibold text-gray-900">{vehicle.type}</div>
                       </button>
                     ))}
                   </div>
                 </div>
 
-                {/* Make and Model */}
+                {/* Enhanced Make and Model Selection */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
-                  {/* Make Dropdown */}
                   <select
                     name="make"
                     value={selectedMake}
@@ -181,111 +202,119 @@ const Hero = () => {
                         model: "",
                       }));
                     }}
-                    className="w-full p-3 border border-gray-300 rounded-xl text-gray-700 bg-gray-50 focus:ring-2 focus:ring-[#E0A75E] focus:border-transparent"
+                    required
+                    className="w-full p-3 border-2 border-gray-300 rounded-xl text-gray-700 bg-white focus:ring-2 focus:ring-[#E0A75E] focus:border-[#E0A75E] transition-all"
                   >
-                    <option value="">Select Make</option>
-                    {Object.keys(vehicleData[selectedVehicleType]).map(
-                      (make, idx) => (
-                        <option key={idx} value={make}>
-                          {make}
-                        </option>
-                      )
-                    )}
+                    <option value="">Choose Vehicle Make*</option>
+                    {Object.keys(vehicleData[selectedVehicleType]).map((make, idx) => (
+                      <option key={idx} value={make}>{make}</option>
+                    ))}
                   </select>
 
-                  {/* Model Dropdown */}
                   <select
                     name="model"
                     value={formData.model}
                     onChange={handleInputChange}
                     disabled={!selectedMake}
-                    className="w-full p-3 border border-gray-300 rounded-xl text-gray-700 bg-gray-50 focus:ring-2 focus:ring-[#E0A75E] focus:border-transparent"
+                    required
+                    className="w-full p-3 border-2 border-gray-300 rounded-xl text-gray-700 bg-white focus:ring-2 focus:ring-[#E0A75E] focus:border-[#E0A75E] transition-all disabled:bg-gray-100"
                   >
-                    <option value="">Select Model</option>
+                    <option value="">Choose Model*</option>
                     {selectedMake &&
-                      vehicleData[selectedVehicleType][selectedMake].map(
-                        (model, idx) => (
-                          <option key={idx} value={model}>
-                            {model}
-                          </option>
-                        )
-                      )}
+                      vehicleData[selectedVehicleType][selectedMake].map((model, idx) => (
+                        <option key={idx} value={model}>{model}</option>
+                      ))}
                   </select>
                 </div>
 
-                {/* Vehicle Number */}
+                {/* Enhanced Input Fields */}
                 <div className="mb-6 relative">
-                  <i className="ri-id-card-line absolute left-4 top-1/2 -translate-y-1/2 text-[#E0A75E] text-lg"></i>
+                  <i className="ri-id-card-line absolute left-4 top-1/2 -translate-y-1/2 text-[#E0A75E] text-xl"></i>
                   <input
                     type="text"
                     name="vehicleNumber"
                     value={formData.vehicleNumber}
                     onChange={handleInputChange}
-                    className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl text-gray-700 bg-gray-50 focus:ring-2 focus:ring-[#E0A75E] focus:border-transparent"
-                    placeholder="Vehicle No: AB12CD3456"
+                    required
+                    className="w-full pl-12 pr-4 py-3 border-2 border-gray-300 rounded-xl text-gray-700 bg-white focus:ring-2 focus:ring-[#E0A75E] focus:border-[#E0A75E] transition-all"
+                    placeholder="Vehicle Registration Number (e.g., MH01AB1234)*"
                   />
                 </div>
 
-                {/* Name and Phone */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
-                  {/* Name */}
-                  <div className="mb-6 relative">
-                    <i className="ri-user-fill absolute left-4 top-1/2 -translate-y-1/2 text-[#E0A75E] text-lg"></i>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
+                  <div className="relative">
+                    <i className="ri-user-fill absolute left-4 top-1/2 -translate-y-1/2 text-[#E0A75E] text-xl"></i>
                     <input
                       type="text"
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl text-gray-700 bg-gray-50 focus:ring-2 focus:ring-[#E0A75E] focus:border-transparent"
-                      placeholder="Your Name"
+                      required
+                      className="w-full pl-12 pr-4 py-3 border-2 border-gray-300 rounded-xl text-gray-700 bg-white focus:ring-2 focus:ring-[#E0A75E] focus:border-[#E0A75E] transition-all"
+                      placeholder="Your Full Name*"
                     />
                   </div>
 
-                  {/* Phone */}
-                  <div className="mb-6 relative">
-                    <i className="ri-phone-fill absolute left-4 top-1/2 -translate-y-1/2 text-[#E0A75E] text-lg"></i>
+                  <div className="relative">
+                    <i className="ri-phone-fill absolute left-4 top-1/2 -translate-y-1/2 text-[#E0A75E] text-xl"></i>
                     <input
                       type="tel"
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl text-gray-700 bg-gray-50 focus:ring-2 focus:ring-[#E0A75E] focus:border-transparent"
-                      placeholder="Phone Number"
+                      required
+                      pattern="[0-9]{10}"
+                      className="w-full pl-12 pr-4 py-3 border-2 border-gray-300 rounded-xl text-gray-700 bg-white focus:ring-2 focus:ring-[#E0A75E] focus:border-[#E0A75E] transition-all"
+                      placeholder="10-Digit Mobile Number*"
                     />
                   </div>
                 </div>
 
-                {/* Terms */}
-                <div className="mb-4">
-                  <label className="flex items-start gap-3 text-xs sm:text-sm text-gray-700 cursor-pointer">
+                {/* Enhanced Terms */}
+                <div className="mb-6">
+                  <label className="flex items-start gap-3 text-sm text-gray-700 cursor-pointer">
                     <input
                       type="checkbox"
                       name="agreeTerms"
                       checked={formData.agreeTerms}
                       onChange={handleInputChange}
-                      className="mt-1 w-4 h-4 text-[#E0A75E] border-gray-300 rounded focus:ring-[#E0A75E]"
+                      required
+                      className="mt-1 w-5 h-5 text-[#E0A75E] border-gray-300 rounded focus:ring-[#E0A75E]"
                     />
                     <span>
                       I agree to the{" "}
-                      <span className="text-[#E0A75E] underline font-medium">
+                      <span className="text-[#E0A75E] underline font-semibold hover:text-[#e59d43]">
                         Terms & Conditions
                       </span>
+                      {" "}and authorize contact via phone/WhatsApp for vehicle valuation.
                     </span>
                   </label>
                 </div>
 
-                {/* Submit */}
+                {/* Enhanced Submit Button */}
                 <button
                   type="submit"
-                  disabled={!formData.agreeTerms}
-                  className={`w-full py-3 rounded-xl font-semibold text-white ${
-                    formData.agreeTerms
-                      ? "bg-[#E0A75E] hover:scale-105 transition-all"
-                      : "bg-[#E0A75E]/60 cursor-not-allowed"
+                  disabled={!formData.agreeTerms || isSubmitting}
+                  className={`w-full py-2 rounded-full text-white text-lg transition-all duration-300 ${
+                    formData.agreeTerms && !isSubmitting
+                      ? "bg-[#E0A75E] hover:bg-[#e59d43] hover:scale-105 shadow-lg"
+                      : "bg-gray-400 cursor-not-allowed"
                   }`}
                 >
-                  <i className="ri-calculator-fill mr-2"></i> Get My Free Quote
+                  {isSubmitting ? (
+                    <>
+                      <i className="ri-loader-4-line mr-2 animate-spin"></i>
+                      Processing Request...
+                    </>
+                  ) : (
+                    <>
+                      <i className="ri-calculator-fill mr-2"></i>
+                      Get My Free Quote
+                    </>
+                  )}
                 </button>
+
+               
               </form>
             </div>
           </div>

@@ -1,107 +1,140 @@
-import React from 'react';
+import React from "react";
 
 const Process = () => {
   const steps = [
     {
       number: "01",
-      title: "Request a Quote",
-      description: "Call us or fill out our form with your vehicle details. We'll provide an instant estimate based on your vehicle's make, model, and condition.",
-      icon: "ri-file-list-3-line"
+      title: "Request Quote",
+      description:
+        "Submit vehicle details through our secure form or call our experts for instant valuation.",
+      icon: "ri-file-list-3-line",
+      highlight: "Instant Response",
     },
     {
-      number: "02", 
-      title: "Free Vehicle Pickup",
-      description: "We'll schedule a convenient time to collect your vehicle from your location at no extra cost. Our team handles all the logistics, even for non-running vehicles.",
-      icon: "ri-truck-line"
+      number: "02",
+      title: "Schedule Pickup",
+      description:
+        "Our certified team arranges convenient pickup at your location with all necessary equipment.",
+      icon: "ri-truck-line",
+      highlight: "Zero Cost Pickup",
     },
     {
       number: "03",
-      title: "Documentation & Scrapping", 
-      description: "We handle all paperwork including RTO deregistration. Your vehicle is scrapped following environmentally friendly processes at our government-certified facility.",
-      note: "All processes digitally tracked via Vahan portal",
-      icon: "ri-file-text-line"
+      title: "Legal Processing",
+      description:
+        "Complete RTO deregistration and environmentally compliant dismantling at authorized facility.",
+      icon: "ri-shield-check-line",
+      highlight: "Government Certified",
     },
     {
       number: "04",
-      title: "Payment & Certificates",
-      description: "Receive immediate payment for your vehicle along with official Certificate of Vehicle Scrapping (CVS) and Certificate of Deposit (CoD) for additional benefits.",
-      note: "Only authorized RVSFs can legally issue these certificates.",
-      icon: "ri-money-dollar-circle-line"
-    }
+      title: "Secure Payment",
+      description:
+        "Immediate digital payment with official certificates for tax benefits and compliance.",
+      icon: "ri-secure-payment-line",
+      highlight: "Same Day Payment",
+    },
   ];
 
   return (
-    <section className="bg-white py-12 sm:py-16 lg:py-20 px-4">
-      <div className="max-w-6xl mx-auto w-full">
-        {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
-            Simple 4-Step Process
+    <section className="relative bg-gradient-to-b from-gray-50 to-white py-20 overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 right-10 w-72 h-72 bg-[#E0A75E]/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-[#E0A75E]/3 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="relative max-w-8xl mx-auto px-20">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#E0A75E] mb-6 leading-tight">
+            Scrapping Process
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
-            We handle everything from pickup to paperwork with complete transparency and professionalism
+
+          <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-normal">
+            India's most professional vehicle scrapping service with full
+            transparency, compliance & hassle-free process.
           </p>
         </div>
 
-        {/* Steps Container */}
+        {/* Steps */}
         <div className="relative">
-          {/* Steps Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 relative z-10">
+          {/* Connection Line for Desktop */}
+          <div className="hidden lg:block absolute top-24 left-0 right-0">
+            <div className="flex justify-between items-center max-w-5xl mx-auto px-20">
+              {[0, 1, 2].map((index) => (
+                <div
+                  key={index}
+                  className="flex-1 h-0.5 bg-gradient-to-r from-[#E0A75E] to-[#E0A75E]/30 mx-8"
+                ></div>
+              ))}
+            </div>
+          </div>
+
+          {/* Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 items-stretch">
             {steps.map((step, index) => (
-              <div 
-                key={index} 
-                className={`group relative p-6 sm:p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 ${
-                  index % 2 === 0 ? 'lg:mt-0' : 'lg:mt-12'
-                }`}
-              >
-                {/* Step Number Badge */}
-                <div className="absolute -top-4 sm:-top-6 -left-4 sm:-left-6 w-12 h-12 sm:w-16 sm:h-16 bg-[#E0A75E] rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-white font-bold text-base sm:text-lg">{step.number}</span>
-                </div>
-
-                {/* Remix Icon */}
-                <div className="text-[#E0A75E] mb-4 sm:mb-6 ml-4 sm:ml-6">
-                  <i className={`${step.icon} text-3xl sm:text-4xl`}></i>
-                </div>
-
-                {/* Content */}
-                <div className="space-y-3 sm:space-y-4">
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 group-hover:text-[#E0A75E] transition-colors duration-300">
-                    {step.title}
-                  </h3>
-
-                  <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
-                    {step.description}
-                  </p>
-
-                  {/* Special Notes */}
-                  {step.note && (
-                    <div className="bg-gradient-to-r from-[#E0A75E]/10 to-transparent p-3 sm:p-4 rounded-lg border-l-4 border-[#E0A75E]">
-                      <p className="text-gray-800 font-medium text-sm">
-                        <i className="ri-check-line text-[#E0A75E] mr-2"></i>
-                        {step.note}
-                      </p>
+              <div key={index} className="group relative h-full">
+                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 flex flex-col h-full min-h-[380px]">
+                  {/* Step Icon */}
+                  <div className="relative mb-8">
+                    <div className="w-16 h-16 bg-gradient-to-br from-[#E0A75E] to-[#e59d43] rounded-2xl flex items-center justify-center shadow-lg mx-auto">
+                      <i className={`${step.icon} text-2xl text-white`}></i>
                     </div>
-                  )}
-                </div>
-
-                {/* Connecting Arrow (Desktop only) */}
-                {index < steps.length - 2 && (
-                  <div className="hidden lg:block absolute -bottom-6 left-1/2 transform -translate-x-1/2">
-                    <div className="w-8 h-8 bg-[#E0A75E]/20 rounded-full flex items-center justify-center">
-                      <i className="ri-arrow-down-line text-[#E0A75E]"></i>
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">
+                        {step.number}
+                      </span>
                     </div>
                   </div>
-                )}
 
-                {/* Mobile Connector Line */}
+                  {/* Card Content */}
+                  <div className="text-center space-y-4 flex-1 flex flex-col">
+                    <h3 className="text-xl font-bold text-gray-900">
+                      {step.title}
+                    </h3>
+
+                    <p className="text-gray-600 leading-relaxed text-sm flex-1">
+                      {step.description}
+                    </p>
+
+                    <div className="inline-flex items-center gap-2 bg-[#E0A75E]/10 px-3 py-2 rounded-full mt-auto">
+                      <div className="w-2 h-2 bg-[#E0A75E] rounded-full"></div>
+                      <span className="text-[#E0A75E] font-semibold text-xs uppercase tracking-wider">
+                        {step.highlight}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Mobile Arrow */}
                 {index < steps.length - 1 && (
-                  <div className="lg:hidden flex justify-center mt-6">
-                    <div className="w-1 h-8 bg-gradient-to-b from-[#E0A75E] to-[#E0A75E]/30 rounded-full"></div>
+                  <div className="lg:hidden flex justify-center mt-8 mb-4">
+                    <div className="w-12 h-12 bg-[#E0A75E]/10 rounded-full flex items-center justify-center border-2 border-[#E0A75E]/20">
+                      <i className="ri-arrow-down-line text-[#E0A75E] text-lg"></i>
+                    </div>
                   </div>
                 )}
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Certifications */}
+        <div className="mt-12 flex flex-wrap justify-center items-center gap-8 opacity-60">
+          <div className="flex items-center gap-2 text-gray-600">
+            <i className="ri-government-line text-xl"></i>
+            <span className="font-medium text-sm">MoRTH Approved</span>
+          </div>
+          <div className="w-px h-6 bg-gray-300"></div>
+          <div className="flex items-center gap-2 text-gray-600">
+            <i className="ri-leaf-line text-xl"></i>
+            <span className="font-medium text-sm">Eco-Friendly Process</span>
+          </div>
+          <div className="w-px h-6 bg-gray-300"></div>
+          <div className="flex items-center gap-2 text-gray-600">
+            <i className="ri-secure-payment-line text-xl"></i>
+            <span className="font-medium text-sm">Secure Transactions</span>
           </div>
         </div>
       </div>

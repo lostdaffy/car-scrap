@@ -1,233 +1,204 @@
 import React from "react";
 
 const FinancialLegalBenefits = () => {
-  const monetaryBenefits = [
+  const monetaryIncentives = [
     {
-      title: "Get upto 4% of vehicle value*",
-      description: "for your vehicle's scrap value",
+      title: "Vehicle Scrap Value",
+      description:
+        "Receive compensation based on your vehicle's weight, material composition, and current market rates",
     },
     {
-      title: "Certificate of Deposit (CoD)",
-      description: "for discounts on new vehicle purchases",
+      title: "Certificate of Deposit",
+      description:
+        "Government-issued voucher providing discounts on new vehicle purchases from authorized dealers",
     },
     {
-      title: "3-4% discount",
-      description: "through Road tax rebate",
+      title: "Road Tax Exemption",
+      description:
+        "Significant rebate on registration tax when purchasing replacement vehicles",
     },
     {
-      title: "Up to 25% off",
-      description: "on Road tax rebates",
-    },
-  ];
-
-  const legalProtectionBenefits = [
-    {
-      title: "Complete liability discharge",
-      description: "once your vehicle is handed over",
-    },
-    {
-      title: "Protection from illegal scrapping penalties",
-      description: "which can reach ₹50,000",
-    },
-    {
-      title: "Avoid future legal complications",
-      description: "if your vehicle is misused",
-    },
-    {
-      title: "Official Certificate",
-      description: "of Vehicle Scrapping and deregistration from RTO records",
-    },
-    {
-      title: "Digitally regulated process",
-      description: "via Vahan and government portals",
+      title: "Additional Incentives",
+      description:
+        "Various state-level tax benefits and fee reductions through government programs",
     },
   ];
 
-  const environmentalBenefits = [
+  const complianceBenefits = [
     {
-      title: "Eco-friendly disposal",
-      description: "of hazardous materials and fluids",
+      icon: "ri-shield-check-fill",
+      title: "Complete Legal Discharge",
+      description:
+        "Official transfer of ownership liability upon authorized facility handover",
     },
     {
-      title: "Recycling of up to 90%",
-      description: "of your vehicle's materials",
+      icon: "ri-alert-fill",
+      title: "Penalty Protection",
+      description:
+        "Safeguard against substantial illegal scrapping fines and legal consequences",
     },
     {
-      title: "Reduction in carbon footprint",
-      description: "by removing polluting vehicles",
+      icon: "ri-file-shield-fill",
+      title: "Future Liability Shield",
+      description:
+        "Protection from legal consequences if vehicle is misused after disposal",
     },
     {
-      title: "Contribution to circular economy",
-      description: "through material recovery",
+      icon: "ri-certificate-fill",
+      title: "Official Documentation",
+      description:
+        "Government-issued Certificate of Destruction and RTO deregistration",
+    },
+    {
+      icon: "ri-database-fill",
+      title: "Digital Compliance",
+      description:
+        "Automated processing through Vahan portal and government databases",
+    },
+  ];
+
+  const sustainabilityImpact = [
+    {
+      icon: "ri-recycle-fill",
+      title: "Maximum Material Recovery",
+      description:
+        "Steel, aluminum, and valuable metals recycled for manufacturing new products",
+    },
+    {
+      icon: "ri-drop-fill",
+      title: "Hazardous Waste Management",
+      description:
+        "Safe disposal of batteries, oils, fluids, and toxic components",
+    },
+    {
+      icon: "ri-plant-fill",
+      title: "Carbon Footprint Reduction",
+      description:
+        "Significant environmental impact reduction through proper recycling processes",
+    },
+    {
+      icon: "ri-earth-fill",
+      title: "Zero Landfill Impact",
+      description:
+        "Complete material recovery prevents environmental contamination",
     },
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-10 xl:px-20">
-        {/* Header */}
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
-            Financial & Legal Benefits
+    <section className="py-16 lg:py-24 bg-white">
+      <div className="container mx-auto px-4 lg:px-8 xl:px-20">
+        {/* Header Section */}
+        <div className="text-center mb-16 lg:mb-20">
+          <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#E0A75E] mb-6">
+            Complete Value Recovery
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 max-w-4xl mx-auto px-4">
-            Scrapping your vehicle with a Government-Authorized Facility offers
-            significant advantages
+          <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-normal">
+            Get maximum value with legal compliance & eco-friendly scrapping.
           </p>
         </div>
 
-        {/* Benefits Grid */}
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
-          {/* Monetary Benefits */}
-          <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg border border-gray-100">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6 sm:mb-8">
-              <div
-                className="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center flex-shrink-0"
-                style={{ backgroundColor: "#E0A75E20" }}
-              >
-                <i
-                  className="ri-money-dollar-circle-line text-xl sm:text-2xl"
-                  style={{ color: "#E0A75E" }}
-                ></i>
-              </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-800">
-                Monetary Benefits
-              </h3>
+        {/* Financial Incentives */}
+        <div className="mb-16 lg:mb-20">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-12 h-12 bg-[#E0A75E]/20 rounded-xl flex items-center justify-center">
+              <i className="ri-money-dollar-circle-fill text-2xl text-[#E0A75E]"></i>
             </div>
-
-            <div className="space-y-3 sm:space-y-4">
-              {monetaryBenefits.map((benefit, index) => (
-                <div key={index} className="flex gap-3">
-                  <div className="flex-shrink-0">
-                    <i className="ri-check-line text-[#E0A75E] text-base sm:text-lg font-bold"></i>
-                  </div>
-                  <div>
-                    <p className="font-bold text-gray-900 text-sm sm:text-[17px]">
-                      {benefit.title}{" "}
-                      <span className="font-normal text-gray-700">
-                        {benefit.description}
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Special Note */}
-            <div className="mt-6 sm:mt-8 p-3 sm:p-4 rounded-lg border-l-4 border-[#E0A75E] bg-[#E0A75E10]">
-              <div className="flex items-start gap-3">
-                <i
-                  className="ri-information-line mt-0.5 flex-shrink-0"
-                  style={{ color: "#E0A75E" }}
-                ></i>
-                <div>
-                  <p
-                    className="text-xs sm:text-sm font-medium"
-                    style={{ color: "#B8873F" }}
-                  >
-                    You can trade your CoD with any vehicle manufacturer for
-                    additional discounts!
-                  </p>
-                  <p className="text-xs text-gray-600 mt-1">
-                    *Scrap value is based on condition, weight & metal rates.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <h3 className="text-2xl lg:text-3xl font-bold text-gray-900">
+              Financial Incentives
+            </h3>
           </div>
 
-          {/* Legal Protection */}
-          <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg border border-gray-100">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6 sm:mb-8">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center bg-[#E0A75E20] flex-shrink-0">
-                <i className="ri-shield-check-line text-xl sm:text-2xl text-[#E0A75E]"></i>
-              </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-800">
-                Legal Protection
-              </h3>
-            </div>
-
-            <div className="space-y-3 sm:space-y-4">
-              {legalProtectionBenefits.map((benefit, index) => (
-                <div key={index} className="flex gap-3">
-                  <div className="flex-shrink-0">
-                    <i className="ri-check-line text-[#E0A75E] text-base sm:text-lg font-bold"></i>
+          <div className="grid md:grid-cols-2 gap-6">
+            {monetaryIncentives.map((incentive, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-[#E0A75E]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <i className="ri-check-double-fill text-[#E0A75E]"></i>
                   </div>
                   <div>
-                    <p className="font-bold text-gray-950 text-sm sm:text-[17px]">
-                      {benefit.title}{" "}
-                      <span className="font-normal text-gray-700">
-                        {benefit.description}
-                      </span>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3">
+                      {incentive.title}
+                    </h4>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {incentive.description}
                     </p>
                   </div>
                 </div>
-              ))}
-            </div>
-
-            {/* Warning Note */}
-            <div className="mt-6 sm:mt-8 p-3 sm:p-4 bg-red-50 rounded-lg border-l-4 border-red-400">
-              <div className="flex items-start gap-3">
-                <i className="ri-alert-line text-red-500 mt-0.5 flex-shrink-0"></i>
-                <p className="text-red-700 text-xs sm:text-sm font-medium">
-                  <span className="font-bold">Beware:</span> Illegal scrappers
-                  and aggregators don't have proper licenses to scrap vehicles!
-                </p>
               </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Legal Compliance */}
+        <div className="mb-16 lg:mb-20">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
+              <i className="ri-shield-check-fill text-2xl text-red-600"></i>
             </div>
+            <h3 className="text-2xl lg:text-3xl font-bold text-gray-900">
+              Legal Compliance & Protection
+            </h3>
           </div>
 
-          {/* Environmental Benefits */}
-          <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg border border-gray-100 md:col-span-2 xl:col-span-1">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6 sm:mb-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {complianceBenefits.map((benefit, index) => (
               <div
-                className="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center flex-shrink-0"
-                style={{ backgroundColor: "#E0A75E20" }}
+                key={index}
+                className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100"
               >
-                <i
-                  className="ri-leaf-line text-xl sm:text-2xl"
-                  style={{ color: "#E0A75E" }}
-                ></i>
-              </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-800">
-                Environmental Benefits
-              </h3>
-            </div>
-            
-            <div className="space-y-3 sm:space-y-4">
-              {environmentalBenefits.map((benefit, index) => (
-                <div key={index} className="flex gap-3">
-                  <div className="flex-shrink-0">
-                    <i className="ri-check-line text-[#E0A75E] text-base sm:text-lg font-bold"></i>
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-red-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <i className={`${benefit.icon} text-red-600`}></i>
                   </div>
                   <div>
-                    <p className="font-bold text-gray-900 text-sm sm:text-[17px]">
-                      {benefit.title}{" "}
-                      <span className="font-normal text-gray-700">
-                        {benefit.description}
-                      </span>
+                    <h4 className="font-semibold text-gray-900 mb-2">
+                      {benefit.title}
+                    </h4>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {benefit.description}
                     </p>
                   </div>
                 </div>
-              ))}
-            </div>
-
-            {/* Environmental Note */}
-            <div
-              className="mt-6 sm:mt-8 p-3 sm:p-4 rounded-lg border-l-4"
-              style={{ backgroundColor: "#E0A75E10", borderColor: "#E0A75E" }}
-            >
-              <div className="flex items-start gap-3">
-                <i
-                  className="ri-recycle-line mt-0.5 flex-shrink-0"
-                  style={{ color: "#E0A75E" }}
-                ></i>
-                <p className="text-xs sm:text-sm font-medium" style={{ color: "#B8873F" }}>
-                  Our facility follows all environmental guidelines for
-                  sustainable scrapping!
-                </p>
               </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Environmental Impact */}
+        <div>
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
+              <i className="ri-leaf-fill text-2xl text-green-600"></i>
             </div>
+            <h3 className="text-2xl lg:text-3xl font-bold text-gray-900">
+              Environmental Impact
+            </h3>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {sustainabilityImpact.map((impact, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <i className={`${impact.icon} text-green-600`}></i>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3">
+                      {impact.title}
+                    </h4>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {impact.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
