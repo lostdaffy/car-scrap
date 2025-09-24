@@ -85,44 +85,44 @@ const FinancialLegalBenefits = () => {
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-white">
-      <div className="container mx-auto px-4 lg:px-8 xl:px-20">
+    <section className="py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-white">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
         {/* Header Section */}
-        <div className="text-center mb-16 lg:mb-20">
-          <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#E0A75E] mb-6">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16 xl:mb-20">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
             Complete Value Recovery
           </h2>
-          <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-normal">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-normal px-4 sm:px-0">
             Get maximum value with legal compliance & eco-friendly scrapping.
           </p>
         </div>
 
         {/* Financial Incentives */}
-        <div className="mb-16 lg:mb-20">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-12 h-12 bg-[#E0A75E]/20 rounded-xl flex items-center justify-center">
-              <i className="ri-money-dollar-circle-fill text-2xl text-[#E0A75E]"></i>
+        <div className="mb-8 sm:mb-12 lg:mb-16 xl:mb-20">
+          <div className="flex items-center gap-2 sm:gap-3 mb-6 sm:mb-8">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#E0A75E]/20 rounded-lg sm:rounded-xl flex items-center justify-center">
+              <i className="ri-money-dollar-circle-fill text-xl sm:text-2xl text-[#E0A75E]"></i>
             </div>
-            <h3 className="text-2xl lg:text-3xl font-bold text-gray-900">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
               Financial Incentives
             </h3>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {monetaryIncentives.map((incentive, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+                className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-[#E0A75E]/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <i className="ri-check-double-fill text-[#E0A75E]"></i>
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#E0A75E]/20 rounded-md sm:rounded-lg flex items-center justify-center flex-shrink-0">
+                    <i className="ri-check-double-fill text-[#E0A75E] text-sm sm:text-base"></i>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3">
+                    <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-2 sm:mb-3">
                       {incentive.title}
                     </h4>
-                    <p className="text-sm text-gray-600 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                       {incentive.description}
                     </p>
                   </div>
@@ -133,31 +133,31 @@ const FinancialLegalBenefits = () => {
         </div>
 
         {/* Legal Compliance */}
-        <div className="mb-16 lg:mb-20">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
-              <i className="ri-shield-check-fill text-2xl text-red-600"></i>
+        <div className="mb-8 sm:mb-12 lg:mb-16 xl:mb-20">
+          <div className="flex items-center gap-2 sm:gap-3 mb-6 sm:mb-8">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg sm:rounded-xl flex items-center justify-center">
+              <i className="ri-shield-check-fill text-xl sm:text-2xl text-red-600"></i>
             </div>
-            <h3 className="text-2xl lg:text-3xl font-bold text-gray-900">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
               Legal Compliance & Protection
             </h3>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {complianceBenefits.map((benefit, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100"
+                className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm border border-gray-100"
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-red-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <i className={`${benefit.icon} text-red-600`}></i>
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-red-50 rounded-md sm:rounded-lg flex items-center justify-center flex-shrink-0">
+                    <i className={`${benefit.icon} text-red-600 text-sm sm:text-base`}></i>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">
+                    <h4 className="text-sm sm:text-base font-semibold text-gray-900 mb-1 sm:mb-2">
                       {benefit.title}
                     </h4>
-                    <p className="text-sm text-gray-600 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                       {benefit.description}
                     </p>
                   </div>
@@ -169,30 +169,30 @@ const FinancialLegalBenefits = () => {
 
         {/* Environmental Impact */}
         <div>
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
-              <i className="ri-leaf-fill text-2xl text-green-600"></i>
+          <div className="flex items-center gap-2 sm:gap-3 mb-6 sm:mb-8">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-100 rounded-lg sm:rounded-xl flex items-center justify-center">
+              <i className="ri-leaf-fill text-xl sm:text-2xl text-green-600"></i>
             </div>
-            <h3 className="text-2xl lg:text-3xl font-bold text-gray-900">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
               Environmental Impact
             </h3>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {sustainabilityImpact.map((impact, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100"
+                className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm border border-gray-100"
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <i className={`${impact.icon} text-green-600`}></i>
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-green-50 rounded-md sm:rounded-lg flex items-center justify-center flex-shrink-0">
+                    <i className={`${impact.icon} text-green-600 text-sm sm:text-base`}></i>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3">
+                    <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-2 sm:mb-3">
                       {impact.title}
                     </h4>
-                    <p className="text-sm text-gray-600 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                       {impact.description}
                     </p>
                   </div>
