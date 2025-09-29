@@ -7,8 +7,8 @@ const Contact = () => {
   const contactInfo = [
     {
       title: "Phone Number",
-      value: "+91 98765 43210",
-      link: "tel:+919876543210",
+      value: "+91 90686 65363",
+      link: "tel:919068665363",
       icon: "ri-phone-line",
       desc: "Call us for instant quotes",
     },
@@ -21,8 +21,8 @@ const Contact = () => {
     },
     {
       title: "WhatsApp",
-      value: "+91 98765 43210",
-      link: "https://wa.me/919876543210",
+      value: "+91 90686 65363",
+      link: "https://wa.me/919068665363",
       icon: "ri-whatsapp-line",
       desc: "Quick support via WhatsApp",
     },
@@ -174,10 +174,10 @@ const Contact = () => {
                       </div>
                       <div className="text-gray-600">
                         <Link
-                          to="tel:+919876543210"
+                          to="tel:+919068665363"
                           className="text-[#E0A75E] hover:underline font-medium text-xs sm:text-sm"
                         >
-                          +91 98765 43210{" "}
+                          +91 90686 65363{" "} <br />
                         </Link>
                         <Link
                           to="tel:+919258207420"
@@ -198,10 +198,10 @@ const Contact = () => {
                       </div>
                       <div className="text-gray-600">
                         <Link
-                          to="mailto:info@vehiclescrapping.com"
+                          to="mailto:info@garhwalscrap.com"
                           className="text-[#E0A75E] hover:underline font-medium text-xs sm:text-sm"
                         >
-                          info@vehiclescrapping.com
+                          info@garhwalscrap.com
                         </Link>
                       </div>
                     </div>

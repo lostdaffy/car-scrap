@@ -23,9 +23,9 @@ const CallToAction = () => {
                 Get Free Quote
               </Link>
               
-              <Link to="tel:+919876543210" className="flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-[#E0A75E] transition-all duration-300 text-sm sm:text-base">
+              <Link to="tel:+919068665363" className="flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-[#E0A75E] transition-all duration-300 text-sm sm:text-base">
                 <i className="ri-phone-line text-lg sm:text-xl"></i>
-                <span className="hidden sm:inline">Call: </span>+91 98765 43210
+                <span className="hidden sm:inline">Call: </span>+91 90686 65363
               </Link>
             </div>
           </div>

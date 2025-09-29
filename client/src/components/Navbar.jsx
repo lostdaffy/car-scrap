@@ -20,7 +20,7 @@ export default function Navbar() {
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-2 text-gray-900">
                 <i className="ri-phone-line"></i>
-                <span>+91 98765 43210</span>
+                <span>+91 90686 65363</span>
               </div>
               <div className="flex items-center gap-2 text-gray-900">
                 <i className="ri-mail-line"></i>
