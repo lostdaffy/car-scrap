@@ -69,16 +69,16 @@ const Footer = () => {
                 
                 <div className="flex items-center gap-3">
                   <i className="ri-phone-line text-[#E0A75E] text-lg"></i>
-                  <a href="tel:+917280801010" className="hover:text-[#E0A75E] transition-colors">
-                    72-8080-1010
-                  </a>
+                  <Link to="tel:+917280801010" className="hover:text-[#E0A75E] transition-colors">
+                    +91 90686 65363
+                  </Link>
                 </div>
                 
                 <div className="flex items-center gap-3">
                   <i className="ri-mail-line text-[#E0A75E] text-lg"></i>
-                  <a href="mailto:info@gspl.co.in" className="hover:text-[#E0A75E] transition-colors">
-                    info@gspl.co.in
-                  </a>
+                  <Link to="mailto:info@gspl.co.in" className="hover:text-[#E0A75E] transition-colors">
+                    info@garhwalscrap.com
+                  </Link>
                 </div>
 
                 <div className="flex items-center gap-3">

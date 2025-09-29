@@ -6,25 +6,25 @@ const Contact = () => {
   const contactInfo = [
     {
       title: "Phone Number",
-      value: "72-8080-1010",
-      link: "tel:+917280801010",
+      value: "+91 98765 43210",
+      link: "tel:+919876543210",
       icon: "ri-phone-line",
-      desc: "Call us for instant quotes"
+      desc: "Call us for instant quotes",
     },
     {
-      title: "Email Address", 
-      value: "info@gspl.co.in",
-      link: "mailto:info@gspl.co.in",
+      title: "Email Address",
+      value: "info@garhwalscrap.com",
+      link: "mailto:info@garhwalscrap.com",
       icon: "ri-mail-line",
-      desc: "Send us your queries"
+      desc: "Send us your queries",
     },
     {
       title: "WhatsApp",
-      value: "72-8080-1010", 
-      link: "https://wa.me/917280801010",
+      value: "+91 98765 43210",
+      link: "https://wa.me/919876543210",
       icon: "ri-whatsapp-line",
-      desc: "Quick support via WhatsApp"
-    }
+      desc: "Quick support via WhatsApp",
+    },
   ];
 
   return (
@@ -39,24 +39,34 @@ const Contact = () => {
               Get In Touch
             </h2>
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4 sm:px-0">
-              Ready to scrap your vehicle? Contact GSPL through any of these channels for immediate assistance
+              Ready to scrap your vehicle? Contact GSPL through any of these
+              channels for immediate assistance
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12 lg:mb-16">
             {contactInfo.map((contact, index) => (
-              <div key={index} className="text-center bg-gray-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:shadow-lg transition-all duration-300 group">
+              <div
+                key={index}
+                className="text-center bg-gray-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:shadow-lg transition-all duration-300 group"
+              >
                 <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#E0A75E] rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
-                  <i className={`${contact.icon} text-lg sm:text-2xl text-white`}></i>
+                  <i
+                    className={`${contact.icon} text-lg sm:text-2xl text-white`}
+                  ></i>
                 </div>
-                <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-3">{contact.title}</h3>
-                <a 
+                <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-3">
+                  {contact.title}
+                </h3>
+                <a
                   href={contact.link}
                   className="text-[#E0A75E] font-semibold text-base sm:text-lg mb-2 block hover:underline"
                 >
                   {contact.value}
                 </a>
-                <p className="text-gray-600 text-xs sm:text-sm">{contact.desc}</p>
+                <p className="text-gray-600 text-xs sm:text-sm">
+                  {contact.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -71,7 +81,8 @@ const Contact = () => {
               Our Facility Location
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-gray-600 px-4 sm:px-0">
-              Visit our government-authorized vehicle scrapping facility in Haridwar
+              Visit our government-authorized vehicle scrapping facility in
+              Haridwar
             </p>
           </div>
 
@@ -112,7 +123,9 @@ const Contact = () => {
                   </h3>
                   <div className="inline-flex items-center gap-2 bg-[#E0A75E]/10 px-3 py-1 rounded-full">
                     <i className="ri-shield-check-line text-[#E0A75E] text-sm"></i>
-                    <span className="text-[#E0A75E] font-semibold text-xs sm:text-sm">Government Authorized RVSF</span>
+                    <span className="text-[#E0A75E] font-semibold text-xs sm:text-sm">
+                      Government Authorized RVSF
+                    </span>
                   </div>
                 </div>
 
@@ -121,11 +134,16 @@ const Contact = () => {
                   <div className="flex items-start gap-3 sm:gap-4">
                     <i className="ri-map-pin-line text-[#E0A75E] text-lg sm:text-xl flex-shrink-0 mt-1"></i>
                     <div>
-                      <div className="font-bold text-gray-900 mb-1 text-sm sm:text-base">Address:</div>
+                      <div className="font-bold text-gray-900 mb-1 text-sm sm:text-base">
+                        Address:
+                      </div>
                       <div className="text-gray-600 leading-relaxed text-xs sm:text-sm">
-                        DEVBHOOMI INDUSTRIAL AREA<br />
-                        KHASRA NO. 216 VILL.KHATAKHEDI<br />
-                        BHAGWANPUR, HARIDWAR - 247668<br />
+                        DEVBHOOMI INDUSTRIAL AREA
+                        <br />
+                        KHASRA NO. 216 VILL.KHATAKHEDI
+                        <br />
+                        BHAGWANPUR, HARIDWAR - 247668
+                        <br />
                         UTTARAKHAND, INDIA
                       </div>
                     </div>
@@ -135,9 +153,12 @@ const Contact = () => {
                   <div className="flex items-start gap-3 sm:gap-4">
                     <i className="ri-time-line text-[#E0A75E] text-lg sm:text-xl flex-shrink-0 mt-1"></i>
                     <div>
-                      <div className="font-bold text-gray-900 mb-1 text-sm sm:text-base">Operating Hours:</div>
+                      <div className="font-bold text-gray-900 mb-1 text-sm sm:text-base">
+                        Operating Hours:
+                      </div>
                       <div className="text-gray-600 leading-relaxed text-xs sm:text-sm">
-                        Monday - Saturday: 9:00 AM - 6:00 PM<br />
+                        Monday - Saturday: 9:00 AM - 6:00 PM
+                        <br />
                         Sunday: 10:00 AM - 4:00 PM
                       </div>
                     </div>
@@ -147,10 +168,15 @@ const Contact = () => {
                   <div className="flex items-start gap-3 sm:gap-4">
                     <i className="ri-phone-line text-[#E0A75E] text-lg sm:text-xl flex-shrink-0 mt-1"></i>
                     <div>
-                      <div className="font-bold text-gray-900 mb-1 text-sm sm:text-base">Direct Contact:</div>
+                      <div className="font-bold text-gray-900 mb-1 text-sm sm:text-base">
+                        Direct Contact:
+                      </div>
                       <div className="text-gray-600">
-                        <a href="tel:+917280801010" className="text-[#E0A75E] hover:underline font-medium text-xs sm:text-sm">
-                          72-8080-1010
+                        <a
+                          href="tel:+919876543210"
+                          className="text-[#E0A75E] hover:underline font-medium text-xs sm:text-sm"
+                        >
+                          +91 98765 43210{" "}
                         </a>
                       </div>
                     </div>
@@ -160,10 +186,15 @@ const Contact = () => {
                   <div className="flex items-start gap-3 sm:gap-4">
                     <i className="ri-mail-line text-[#E0A75E] text-lg sm:text-xl flex-shrink-0 mt-1"></i>
                     <div>
-                      <div className="font-bold text-gray-900 mb-1 text-sm sm:text-base">Email:</div>
+                      <div className="font-bold text-gray-900 mb-1 text-sm sm:text-base">
+                        Email:
+                      </div>
                       <div className="text-gray-600">
-                        <a href="mailto:info@gspl.co.in" className="text-[#E0A75E] hover:underline font-medium text-xs sm:text-sm">
-                          info@gspl.co.in
+                        <a
+                          href="mailto:info@vehiclescrapping.com"
+                          className="text-[#E0A75E] hover:underline font-medium text-xs sm:text-sm"
+                        >
+                          info@vehiclescrapping.com
                         </a>
                       </div>
                     </div>
@@ -196,7 +227,8 @@ const Contact = () => {
               Our Service Areas
             </h2>
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4 sm:px-0">
-              We provide vehicle scrapping services across Uttarakhand and surrounding regions
+              We provide vehicle scrapping services across Uttarakhand and
+              surrounding regions
             </p>
           </div>
 
@@ -209,13 +241,18 @@ const Contact = () => {
               { city: "Haldwani", desc: "Kumaon Region" },
               { city: "Rudrapur", desc: "Industrial Belt" },
               { city: "Kashipur", desc: "Border Region" },
-              { city: "Tehri", desc: "Hill Station Coverage" }
+              { city: "Tehri", desc: "Hill Station Coverage" },
             ].map((area, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg sm:rounded-xl p-4 sm:p-6 text-center hover:shadow-lg transition-all duration-300">
+              <div
+                key={index}
+                className="bg-gray-50 rounded-lg sm:rounded-xl p-4 sm:p-6 text-center hover:shadow-lg transition-all duration-300"
+              >
                 <div className="w-8 h-8 sm:w-12 sm:h-12 bg-[#E0A75E] rounded-lg sm:rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
                   <i className="ri-map-pin-fill text-white text-sm sm:text-xl"></i>
                 </div>
-                <h3 className="text-sm sm:text-base lg:text-lg font-bold text-gray-900 mb-1 sm:mb-2">{area.city}</h3>
+                <h3 className="text-sm sm:text-base lg:text-lg font-bold text-gray-900 mb-1 sm:mb-2">
+                  {area.city}
+                </h3>
                 <p className="text-gray-600 text-xs sm:text-sm">{area.desc}</p>
               </div>
             ))}

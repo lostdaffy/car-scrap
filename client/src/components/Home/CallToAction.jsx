@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CallToAction = () => {
   return (
@@ -17,15 +18,15 @@ const CallToAction = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-              <button className="flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-white hover:bg-gray-100 text-[#E0A75E] font-semibold rounded-full transition-all duration-300 hover:scale-105 text-sm sm:text-base shadow-lg">
+              <Link to="/" className="flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-white hover:bg-gray-100 text-[#E0A75E] font-semibold rounded-full transition-all duration-300 hover:scale-105 text-sm sm:text-base shadow-lg">
                 <i className="ri-file-text-line text-lg sm:text-xl"></i>
                 Get Free Quote
-              </button>
+              </Link>
               
-              <button className="flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-[#E0A75E] transition-all duration-300 text-sm sm:text-base">
+              <Link to="tel:+919876543210" className="flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-[#E0A75E] transition-all duration-300 text-sm sm:text-base">
                 <i className="ri-phone-line text-lg sm:text-xl"></i>
-                <span className="hidden sm:inline">Call: </span>72-8080-1010
-              </button>
+                <span className="hidden sm:inline">Call: </span>+91 98765 43210
+              </Link>
             </div>
           </div>
 

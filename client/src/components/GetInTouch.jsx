@@ -21,7 +21,7 @@ const GetInTouch = () => {
     
     // WhatsApp integration with GSPL number
     const whatsappMessage = `Hello GSPL! I'm interested in your vehicle scrapping services.\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nSubject: ${formData.subject}\nMessage: ${formData.message}`;
-    const whatsappUrl = `https://wa.me/917280801010?text=${encodeURIComponent(
+    const whatsappUrl = `https://wa.me/919876543210?text=${encodeURIComponent(
       whatsappMessage
     )}`;
     window.open(whatsappUrl, "_blank");
@@ -167,7 +167,7 @@ const GetInTouch = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 text-lg mb-1">Phone</h4>
-                    <p className="text-gray-600">72-8080-1010</p>
+                    <p className="text-gray-600">+91 98765 43210</p>
                     <p className="text-gray-500 text-sm">Emergency pickup available 24/7</p>
                   </div>
                 </div>
@@ -179,7 +179,7 @@ const GetInTouch = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 text-lg mb-1">Email</h4>
-                    <p className="text-gray-600">info@gspl.co.in</p>
+                    <p className="text-gray-600">info@vehiclescrapping.com</p>
                     <p className="text-gray-500 text-sm">Get detailed quotes via email</p>
                   </div>
                 </div>

@@ -24,7 +24,7 @@ export default function Navbar() {
               </div>
               <div className="flex items-center gap-2 text-gray-900">
                 <i className="ri-mail-line"></i>
-                <span>info@vehiclescrapping.com</span>
+                <span>info@garhwalscrap.com</span>
               </div>
             </div>
             
@@ -117,7 +117,7 @@ export default function Navbar() {
               <div className="pt-4 border-t border-gray-800 space-y-3">
                 <div className="flex items-center gap-2 text-gray-300 px-4">
                   <i className="ri-phone-line text-[#E0A75E]"></i>
-                  <span>+91 98765 43210</span>
+                  <span>+91 90686 65363</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-300 px-4">
                   <i className="ri-mail-line text-[#E0A75E]"></i>
