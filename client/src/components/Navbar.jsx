@@ -46,10 +46,15 @@ export default function Navbar() {
           <div className="flex justify-between items-center py-3">
             {/* Logo */}
             <div className="flex gap-2 sm:gap-3 lg:gap-5">
-              <div>
+              <div className="flex gap-5">
                 <img
                   src="/images/logo.png"
                   className="w-12 sm:w-16 lg:w-18"
+                  alt="Logo"
+                />
+                <img
+                  src="/images/icon.png"
+                  className="w-25"
                   alt="Logo"
                 />
               </div>

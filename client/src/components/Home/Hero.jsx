@@ -120,7 +120,7 @@ const Hero = () => {
               <div className="inline-flex mb-3 sm:mb-4">
                 <span className="hidden sm:block bg-[#E0A75E] text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold shadow-lg">
                   <i className="ri-shield-check-line mr-1 sm:mr-2"></i>
-                  Government Registered & RTO Approved Facility
+                  Certified RVSF Recycler
                 </span>
               </div>
 
@@ -134,6 +134,8 @@ const Hero = () => {
                 valuation, doorstep pickup, and immediate payment with proper
                 documentation.
               </p>
+
+              <p className="text-2xl text-[#E0A75E]">Certified RVSF Recycler</p>
 
               {/* Trust Indicators */}
               <div className="hidden sm:flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-4 mt-6 sm:mt-8">

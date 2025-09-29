@@ -1,6 +1,7 @@
 import React from "react";
 import HeroSection from "../components/HeroSection";
 import GetInTouch from "../components/GetInTouch";
+import {Link} from "react-router-dom"
 
 const Contact = () => {
   const contactInfo = [
@@ -58,12 +59,12 @@ const Contact = () => {
                 <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-3">
                   {contact.title}
                 </h3>
-                <a
-                  href={contact.link}
+                <Link
+                  to={contact.link}
                   className="text-[#E0A75E] font-semibold text-base sm:text-lg mb-2 block hover:underline"
                 >
                   {contact.value}
-                </a>
+                </Link>
                 <p className="text-gray-600 text-xs sm:text-sm">
                   {contact.desc}
                 </p>
@@ -91,7 +92,7 @@ const Contact = () => {
             <div className="order-2 lg:order-1">
               <div className="map-container">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3462.5692602981594!2d78.16450642528674!3d29.91152357569803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929ff23f0093%3A0x51332df6cfd25f60!2sHaridwar%2C%20Uttarakhand!5e1!3m2!1sen!2sin!4v1756593968032!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3288.252147576795!2d77.80853328130225!3d29.880955010561816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390eb78b042d14df%3A0x25bae371655fa49d!2sGarhwal%20scrap%20private%20limited!5e1!3m2!1sen!2sin!4v1759149927129!5m2!1sen!2sin"
                   className="w-full rounded-xl sm:rounded-2xl shadow-lg border-0"
                   height="300"
                   style={{ border: 0, minHeight: "300px" }}
@@ -172,12 +173,18 @@ const Contact = () => {
                         Direct Contact:
                       </div>
                       <div className="text-gray-600">
-                        <a
-                          href="tel:+919876543210"
+                        <Link
+                          to="tel:+919876543210"
                           className="text-[#E0A75E] hover:underline font-medium text-xs sm:text-sm"
                         >
                           +91 98765 43210{" "}
-                        </a>
+                        </Link>
+                        <Link
+                          to="tel:+919258207420"
+                          className="text-[#E0A75E] hover:underline font-medium text-xs sm:text-sm"
+                        >
+                          +91 92582 07420{" "}
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -190,27 +197,27 @@ const Contact = () => {
                         Email:
                       </div>
                       <div className="text-gray-600">
-                        <a
-                          href="mailto:info@vehiclescrapping.com"
+                        <Link
+                          to="mailto:info@vehiclescrapping.com"
                           className="text-[#E0A75E] hover:underline font-medium text-xs sm:text-sm"
                         >
                           info@vehiclescrapping.com
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
 
                   {/* Directions Button */}
                   <div className="pt-2 sm:pt-4">
-                    <a
-                      href="https://www.google.com/maps/dir//Haridwar,+Uttarakhand"
+                    <Link
+                      to="https://www.google.com/maps/dir//Haridwar,+Uttarakhand"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full bg-[#E0A75E] text-white py-2.5 sm:py-3 px-4 rounded-lg sm:rounded-xl font-semibold hover:bg-[#d49b52] transition-colors duration-300 flex items-center justify-center text-sm sm:text-base"
                     >
                       <i className="ri-navigation-line mr-2"></i>
                       Get Directions
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -234,14 +241,14 @@ const Contact = () => {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
             {[
-              { city: "Haridwar", desc: "Main Facility Location" },
-              { city: "Dehradun", desc: "Capital Region Coverage" },
-              { city: "Rishikesh", desc: "Spiritual City Services" },
-              { city: "Roorkee", desc: "Educational Hub Area" },
-              { city: "Haldwani", desc: "Kumaon Region" },
-              { city: "Rudrapur", desc: "Industrial Belt" },
-              { city: "Kashipur", desc: "Border Region" },
-              { city: "Tehri", desc: "Hill Station Coverage" },
+              { city: "Uttarakhand", desc: "State-wide Presence" },
+              { city: "Delhi", desc: "National Capital Region" },
+              { city: "Punjab", desc: "North India Coverage" },
+              { city: "Haryana", desc: "Industrial & Corporate Zone" },
+              { city: "Uttar Pradesh", desc: "Extended Service Area" },
+              { city: "Himachal Pradesh", desc: "Hill State Services" },
+              { city: "Jammu and Kashmir", desc: "Northernmost Coverage" },
+              { city: "Rajasthan", desc: "Western India Presence" },
             ].map((area, index) => (
               <div
                 key={index}
